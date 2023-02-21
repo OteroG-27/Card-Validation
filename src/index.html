@@ -19,13 +19,23 @@
           </div>
         </div>
         <form>
-          <input type="text" id="nameUser" class="btn btnWhite" placeholder="Nombre" required autocomplete="off">
+          <input type="text" id="nombreUsuario" class="btn btnWhite" placeholder="Nombre" required autocomplete="off">
           <div>
-            <input type="submit" value="Acceder" class="btn btnBlue">
+            <input type="submit" value="Acceder" id="btnAccerder" class="btn btnBlue">
           </div>
         </form>
       </section>
     </main>
+    <script>
+        let acceder = document.getElementById("btnAccerder");
+        acceder.addEventListener("click", () => {
+          event.preventDefault();
+          let nombreUsuario = document.getElementById("nombreUsuario").value;
+          alert(`Bienvenido ${nombreUsuario}`);
+          localStorage.setItem("Nombre",nombreUsuario);
+        });
+        localStorage.clear();
+    </script>
     <script src="./date.js"></script>
     <script src="./index.js" type="module"></script>
   </body>
