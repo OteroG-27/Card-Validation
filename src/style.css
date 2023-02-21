@@ -5,7 +5,7 @@
 }
 .main{
   height: 100vh;
-  background-image: url(img/background.png);
+  background-image: url('https://i.postimg.cc/sgR9hRQp/background.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -22,6 +22,10 @@ h1{
   color: #006fcf;
   font-size: 40px;
   margin-bottom: 50px;
+}
+.fechaTarget{
+  font-weight: bold;
+  color: rgba(71, 109, 144, 1);
 }
 .btn{
   width: 400px;
@@ -40,4 +44,34 @@ h1{
 .btnBlue{
   background-color: rgba(29, 142, 206, 1);
   color: #fff;
+}
+.target{
+  width: 430px;
+  height: 33vh;
+  background: #1C1C1C;
+  background-image: url('https://i.postimg.cc/y8V3K63r/gladiador.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 23px;
+  padding: 20px;
+  color: white;
+}
+.chipYTitulo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 11vh;
+}
+.numberTarget{
+  height: 11vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nameUser{
+  text-align: start;
+  height: 11vh;
+  display: flex;
+  justify-items: flex-start;
+  align-items: flex-end;
 }
