@@ -5,25 +5,28 @@
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload="startTime()">
     <main class="main">
       <section>
-        <div>
+        <div id="clockdate">
           <h1>AMERICAN EXPRESS</h1>
-          <p>Tuesday, September 27, 2022</p>
+          <div class="clockdate-wrapper fechaTarget">
+            <h2>Bienvenido</h2>
+            <div id="date"></div>
+          </div>
         </div>
-        <form action="GET">
-          <input type="text" name="name" id="name" class="btn btnWhite" placeholder="Nombre" required>
-          <label for="Numero invalido!"></label>
+        <form>
+          <input type="text" id="nameUser" class="btn btnWhite" placeholder="Nombre" required autocomplete="off">
           <div>
-            <input type="button" value="Acceder" class="btn btnBlue">
+            <input type="submit" value="Acceder" class="btn btnBlue">
           </div>
         </form>
       </section>
     </main>
-    <script src="index.js" type="module"></script>
+    <script src="./date.js"></script>
+    <script src="./index.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="main">
+    <section>
+      <div>
+        <h1>Buenos Dias, Mousak</h1>
+        <p>Tuesday, September 27, 2022</p>
+      </div>
+      <div class="target">
+        <div class="chipYTitulo">
+          <img src="https://i.postimg.cc/BQ5PRPbK/chip.png" alt="chip">
+          <h3>AMERICAN EXPRESS</h3>
+        </div>
+        <div class="numberTarget">
+          <p>#### #### #### ####</p>
+        </div>
+        <div class="nameUser">
+          <p>Mousak Otero</p>
+        </div>
+      </div>
+      <form>
+        <input type="text" name="name" id="name" class="btn btnWhite" placeholder="Numero de cuenta" required pattern="[">
+        <label for="Numero invalido!"></label>
+        <div>
+          <input type="submit" value="Validar" class="btn btnBlue">
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="./index.js" type="module"></script>
+</body>
+
+</html>
