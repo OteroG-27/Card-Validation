@@ -11,16 +11,19 @@
 
 </head>
 
-<body>
+<body onload="startTime()">
   <main class="main">
     <section>
-      <div>
-        <h1>Buenos Dias, Mousak</h1>
-        <p>Tuesday, September 27, 2022</p>
+      <div id="clockdate">
+        <h1>AMERICAN EXPRESS</h1>
+        <div class="clockdate-wrapper fechaTarget">
+          <h2>Bienvenido</h2>
+          <div id="date"></div>
+        </div>
       </div>
       <div class="target">
         <div class="chipYTitulo">
-          <img src="https://i.postimg.cc/BQ5PRPbK/chip.png" alt="chip">
+          <img src="https://i.postimg.cc/BQ5PRPbK/chip.png" alt="chip" requiered autocomplete="off">
           <h3>AMERICAN EXPRESS</h3>
         </div>
         <div class="numberTarget">
@@ -39,6 +42,7 @@
       </form>
     </section>
   </main>
+  <script src="./date.js"></script>
   <script src="./index.js" type="module"></script>
 </body>
 
