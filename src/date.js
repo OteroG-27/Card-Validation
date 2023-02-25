@@ -17,11 +17,11 @@ function startTime() {
   let days = [
     "Lunes",
     "Martes",
-    "MIercoles",
+    "Miercoles",
     "Jueves",
     "Viernes",
-    "Viernes",
     "Sabado",
+    "Domingo",
   ];
   let curWeekDay = days[today.getDay()];
   let curDay = today.getDate();
