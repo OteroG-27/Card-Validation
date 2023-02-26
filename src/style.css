@@ -75,3 +75,19 @@ h1{
   justify-items: flex-start;
   align-items: flex-end;
 }
+.numberValid{
+  border: 2px solid #16bd00;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url('https://i.postimg.cc/MGR7Xdz3/image.png');
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(1.75em + 0.375rem) calc(1.75em + 0.375rem);
+}
+.numberInvalid{
+  border: 2px solid #dc3545;
+  padding-right: calc(1.5em + 0.75rem);
+  background-image: url('https://i.postimg.cc/TPmwnsLm/image.png');
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(1.75em + 0.375rem) calc(1.75em + 0.375rem);
+}

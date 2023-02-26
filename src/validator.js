@@ -3,26 +3,31 @@ const validator = {
     const newArray = CreditCardNumber.split('').reverse();
     let par = [],
         impar= [];
-    console.log(newArray);
-
-
     const card = newArray.map((number, index) => {
       if(index % 2 === 0){
-        par.push(number)
+        let numXDos = number * 2;
+        if(numXDos > 9) {
+          let numResta = numXDos - 9;
+          par.push(parseInt(numResta))
+        }else{
+          par.push(parseInt(numXDos))
+        }
       }else{
-        impar.push(number)
+        impar.push(parseInt(number))
       }
     });
-    console.log(par);
-    console.log(impar);
-    console.log([...par, ...impar])
+    let fucionArrays = [...par, ...impar];
+    const sumaNumberCard = fucionArrays.reduce(
+      (acumulador, valoractual) => acumulador + valoractual, 0);
+    console.log(sumaNumberCard);
+    if (sumaNumberCard  % 10 === 0 ) {
+      // alert(true);
+      document.getElementById('numberTarget').classList.add('numberValid');
+    } else {
+      // alert(false);
+      document.getElementById('numberTarget').classList.add('numberInvalid');
+    }
 
-  //  const card = (arreglo) => {
-  //     const arrFiltrado = arreglo.filter((num, index) => index % 2 == 0)
-  //     return arrFiltrado
-  //   }
-    // console.log(par.push(card(newArray)));
-    // console.log(par);
 
   },
 
