@@ -40,4 +40,6 @@ function checkTime(i) {
   }
   return i;
 }
+document.getElementById('nameUserSee').innerHTML = localStorage.getItem('Nombre');
+document.querySelector('.nameUserSee').innerHTML = localStorage.getItem('Nombre');
 

@@ -1,3 +1,16 @@
 import validator from './validator.js';
-console.log(validator.isValid("5555555555554444"));
+
+let acceder = document.getElementById('btnAccerder');
+
+acceder.addEventListener('click',  () => {
+  // event.preventDefault();
+  let nameUser = document.getElementById('nameUser').value;
+  localStorage.setItem('Nombre', nameUser);
+});
+
+
+
+
+
+// console.log(validator.isValid("5555555555554444"));
 
