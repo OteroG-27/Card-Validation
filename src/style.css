@@ -41,6 +41,9 @@ h1{
   border: 0.25px solid rgba(224, 224, 224, 0.8);
   padding-left: 30px;
 }
+.btnWhite:focus-visible{
+  border: none;
+}
 .btnBlue{
   background-color: rgba(29, 142, 206, 1);
   color: #fff;

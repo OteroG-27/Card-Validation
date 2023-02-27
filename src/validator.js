@@ -19,43 +19,21 @@ const validator = {
     let fucionArrays = [...par, ...impar];
     const sumaNumberCard = fucionArrays.reduce(
       (acumulador, valoractual) => acumulador + valoractual, 0);
-    console.log(sumaNumberCard);
+    // console.log(sumaNumberCard);
     if (sumaNumberCard  % 10 === 0 ) {
       // alert(true);
+      document.getElementById('numberTarget').classList.remove('numberInvalid');
       document.getElementById('numberTarget').classList.add('numberValid');
     } else {
       // alert(false);
       document.getElementById('numberTarget').classList.add('numberInvalid');
+      document.getElementById('numberTarget').classList.remove('numberValid');
+
     }
 
 
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // maskify: function(){
+  // maskify(){
   // }
 };
 export default validator;
