@@ -1,4 +1,4 @@
-function startTime() {
+let startTime = () => {
   let today = new Date();
   let months = [
     "Enero",
@@ -34,12 +34,11 @@ function startTime() {
     startTime();
   }, 500);
 }
-function checkTime(i) {
+const checkTime = (i) => {
   if (i < 10) {
     i = "0" + i;
   }
   return i;
 }
-document.getElementById('nameUserSee').innerHTML = localStorage.getItem('Nombre');
-document.querySelector('.nameUserSee').innerHTML = localStorage.getItem('Nombre');
 
+export {startTime, checkTime} ;

@@ -1,16 +1,16 @@
 import validator from './validator.js';
+import {startTime, checkTime} from './date.js';
+window.addEventListener('DOMContentLoaded', startTime, checkTime);
 
-let acceder = document.getElementById('btnAccerder');
+let validate = document.getElementById('validate');
+validate.addEventListener('click', (event) => {
+  event.preventDefault();
+  let numberTargetCredid = document.getElementById('numberTarget').value;
+  validator.isValid(numberTargetCredid);
 
-acceder.addEventListener('click',  () => {
-  // event.preventDefault();
-  let nameUser = document.getElementById('nameUser').value;
-  localStorage.setItem('Nombre', nameUser);
+  document.getElementById('numberTargetSee').innerHTML = numberTargetCredid;
+
 });
 
 
-
-
-
-// console.log(validator.isValid("5555555555554444"));
 
