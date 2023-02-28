@@ -41,7 +41,18 @@ const validator = {
     });
     console.log(par);
     console.log(impar);
-
+    let fucionArrays = [...par, ...impar];
+    const sumaNumberCard = fucionArrays.reduce(
+      (acumulador, valoractual) => acumulador + valoractual, 0);
+    if (sumaNumberCard  % 10 === 0 ) {
+      alert("Numero de targeta valido")
+      // document.getElementById('numberTarget').classList.remove('numberInvalid');
+      // document.getElementById('numberTarget').classList.add('numberValid');
+    } else {
+      alert("Numero de targeta invalido")
+      // document.getElementById('numberTarget').classList.add('numberInvalid');
+      // document.getElementById('numberTarget').classList.remove('numberValid');
+    }
   },
   // maskify(){
   // }
