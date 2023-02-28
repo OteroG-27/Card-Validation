@@ -30,7 +30,7 @@ let startTime = () => {
   let date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
   document.getElementById("date").innerHTML = date;
 
-  let time = setTimeout(function () {
+  let time = setTimeout(() => {
     startTime();
   }, 500);
 }
@@ -40,5 +40,6 @@ const checkTime = (i) => {
   }
   return i;
 }
-
+let nombre = localStorage.getItem('Nombre');
+document.getElementById('nameUserSee').innerHTML = nombre;
 export {startTime, checkTime} ;
