@@ -58,13 +58,9 @@ const validator = {
   maskify(CreditCardNumber){
     const newArray = CreditCardNumber.split('');
     console.log(newArray);
-    let nu = newArray.forEach((elem, i) => {
-      // console.log(elem.replace(elem.length < 4, '#'));
-      if (elem.length < 4) {
+    newArray.fill('#', 0, newArray.length - 4)
 
-       }
-    });
-    console.log(nu);
+    console.log(newArray);
   }
 };
 
