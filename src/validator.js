@@ -30,18 +30,19 @@ const validator = {
     // }
     console.log(newArray);
     const isValidNumber = newArray.filter((number, i) =>  i % 2 == 0 ).map(number => number * 2);
-    console.log(isValidNumber);
-    isValidNumber.forEach(elem => {
-      if (elem > 9) {
-        let numResta = elem - 9;
+    // console.log(isValidNumber);
+    isValidNumber.forEach(newNumber => {
+      if (newNumber > 9) {
+        let numResta = newNumber - 9;
         par.push(parseInt(numResta))
       }else{
-        impar.push(parseInt(elem))
+        impar.push(parseInt(newNumber))
       }
     });
-    console.log(par);
-    console.log(impar);
+    // console.log(par);
+    // console.log(impar);
     let fucionArrays = [...par, ...impar];
+    // console.log(fucionArrays);
     const sumaNumberCard = fucionArrays.reduce(
       (acumulador, valoractual) => acumulador + valoractual, 0);
     if (sumaNumberCard  % 10 === 0 ) {
@@ -54,7 +55,13 @@ const validator = {
       // document.getElementById('numberTarget').classList.remove('numberValid');
     }
   },
-  // maskify(){
-  // }
+  maskify(CreditCardNumber){
+    const newArray = CreditCardNumber.split('');
+    console.log(newArray);
+    newArray.fill('#', 0, newArray.length - 4)
+
+    console.log(newArray);
+  }
 };
+
 export default validator;
