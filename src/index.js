@@ -12,15 +12,12 @@ validate.addEventListener('click', (event) => {
   let numeroConNumeral = validator.maskify(numberTargetCredit).join('');
   if(isValid){
     document.getElementById('numberTargetSee').innerHTML = numeroConNumeral;
-    document.getElementById('numberTarget').classList.remove('numberInvalid');
     document.getElementById('numberTarget').classList.add('numberValid');
-    alert('Numero valido')
+    document.getElementById('numberTarget').classList.remove('numberInvalid');
   }else{
     document.getElementById('numberTargetSee').innerHTML = numeroConNumeral;
-    document.getElementById('numberTarget').classList.add('numberInvalid');
-    document.getElementById('numberTarget').classList.remove('numberValid');
-    alert('Introduzca un numero valido')
-
+    // document.getElementById('numberTarget').classList.add('numberInvalid');
+    // document.getElementById('numberTarget').classList.remove('numberValid');
   }
 });
 
