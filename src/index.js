@@ -1,23 +1,23 @@
 import validator from './validator.js';
 import {startTime, checkTime} from './date.js';
 window.addEventListener('DOMContentLoaded', startTime, checkTime);
-// validator.isValid('4539148803436467');
-
-
+// validator.isValid('79927398713');
 let validate = document.getElementById('validate');
 validate.addEventListener('click', (event) => {
   event.preventDefault();
   let numberTargetCredit = document.getElementById('numberTarget').value;
   let isValid = validator.isValid(numberTargetCredit);
-  let numeroConNumeral = validator.maskify(numberTargetCredit).join('');
+  let numeroConNumeral = validator.maskify(numberTargetCredit);
   if(isValid){
-    document.getElementById('numberTargetSee').innerHTML = numeroConNumeral;
+    alert("Numero valido");
     document.getElementById('numberTarget').classList.add('numberValid');
     document.getElementById('numberTarget').classList.remove('numberInvalid');
-  }else{
     document.getElementById('numberTargetSee').innerHTML = numeroConNumeral;
-    // document.getElementById('numberTarget').classList.add('numberInvalid');
-    // document.getElementById('numberTarget').classList.remove('numberValid');
+  }else{
+    alert('Introduzca un numero de tarjeta valido');
+    document.getElementById('numberTargetSee').innerHTML = numeroConNumeral;
+    document.getElementById('numberTarget').classList.add('numberInvalid');
+    document.getElementById('numberTarget').classList.remove('numberValid');
   }
 });
 
