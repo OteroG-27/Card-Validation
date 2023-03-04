@@ -1,26 +1,33 @@
 const validator = {
-  isValid(CreditCardNumber){
-    const cardNumber = CreditCardNumber.split('');
-    let newArray = [];
-    const isValidNumber = cardNumber.filter((number, i) =>   i % 2 == 0 ).map(number => number * 2);
-    isValidNumber.forEach(newNumber => {
+  isValid(CreditCardNumber) {
+    console.log(CreditCardNumber);
+    const cardNumber = CreditCardNumber.split("").reverse().map(Number);
+    console.log(cardNumber);
+    let newArrayPar = [];
+    let newArrayImpar = [];
+    const isValidNumber = cardNumber.filter((number, i) => (i + 1) % 2 === 0).map((number) => number * 2);
+    isValidNumber.forEach((newNumber) => {
       if (newNumber > 9) {
         let numResta = newNumber - 9;
-        newArray.push(parseInt(numResta))
-      }else{
-        newArray.push(parseInt(newNumber))
+        newArrayPar.push(numResta);
+      } else {
+        newArrayPar.push(newNumber);
       }
     });
-    cardNumber.forEach((numberImpar, i)=> i % 2 !== 0 && newArray.push(parseInt(numberImpar)))
-    const sumaNumberCard = newArray.reduce((acumulador, valoractual) => acumulador + valoractual, 0);
-    if (sumaNumberCard  % 10 === 0 ) {
-      alert("Numero de targeta valido")
+    cardNumber.forEach((numberImpar, i) => (i+1) % 2 !== 0 && newArrayImpar.push(parseInt(numberImpar)));
+    console.log(newArrayPar);
+    console.log(newArrayImpar);
+    const funcArray = [...newArrayPar, ...newArrayImpar];
+    const sumaNumberCard = funcArray.reduce((acumulador, valorActual) => acumulador + valorActual, 0);
+    console.log(sumaNumberCard);
+    if (sumaNumberCard % 10 === 0) {
+      return true;
     } else {
-      alert('Introduzca un numero de tarjeta valido')
+      return false;
     }
   },
-  maskify(CreditCardNumber){
-    return CreditCardNumber.split('').fill('#', 0, CreditCardNumber.length - 4);
-  }
+  maskify(CreditCardNumber) {
+    return CreditCardNumber.split("").fill("#", 0, CreditCardNumber.length - 4).join("");
+  },
 };
 export default validator;
