@@ -12,7 +12,7 @@ const validator = {
         newArrayPar.push(newNumber);
       }
     });
-    cardNumber.forEach((numberImpar, i) => ( i + 1) % 2 !== 0 && newArrayImpar.push(parseInt(numberImpar)));
+    cardNumber.forEach((numberImpar, i) => ( i + 1) % 2 === 1 && newArrayImpar.push(parseInt(numberImpar)));
     const funcArray = [...newArrayPar, ...newArrayImpar];
     const sumaNumberCard = funcArray.reduce((acumulador, valorActual) => acumulador + valorActual, 0);
     if (sumaNumberCard % 10 === 0) {
