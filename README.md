@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # American Express simulator
-=======
-#  American Express Simulator
->>>>>>> 83086e1a8d5bd3356fdef0819424e788c5f9a327
 
 ## Índice
 
