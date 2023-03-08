@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <main class="main">
+    <section>
+      <div id="clockdate">
+        <h1>AMERICAN EXPRESS</h1>
+        <div class="clockdate-wrapper fechaTarget">
+          <h2>Bienvenido <p class="nameUserSee"></p></h2>
+          <div id="date"></div>
+        </div>
+      </div>
+      <div class="target">
+        <div class="chipYTitulo">
+          <img src="https://i.postimg.cc/BQ5PRPbK/chip.png" alt="chip" requiered autocomplete="off">
+          <h3>AMERICAN EXPRESS</h3>
+        </div>
+        <div class="numberTarget">
+           <p id="numberTargetSee"></p>
+        </div>
+        <div class="nameUser">
+          <p id="nameUserSee"></p>
+        </div>
+      </div>
+      <form>
+        <input type="text" id="numberTarget" class="btn btnWhite" placeholder="Numero de cuenta" autocomplete="off" pattern="[0-9]+" maxlength="16" aria-required="false">
+        <div>
+          <input type="submit" value="Validar" id="validate" class="btn btnBlue">
+        </div>
+      </form>
+    </section>
+    <script src="./index.js" type="module"></script>
+</body>
+</html>
