@@ -5,7 +5,7 @@
 }
 .main{
   height: 100vh;
-  background-image: url('https://i.postimg.cc/sgR9hRQp/background.png');
+  background-image: url('https://i.postimg.cc/MTRs0ryP/background.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -41,8 +41,8 @@ h1{
   border: 0.25px solid rgba(224, 224, 224, 0.8);
   padding-left: 30px;
 }
-.btnWhite:focus-visible{
-  border: none;
+input:focus-visible{
+  outline: none;
 }
 .btnBlue{
   background-color: rgba(29, 142, 206, 1);

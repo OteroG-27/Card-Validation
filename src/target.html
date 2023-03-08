@@ -27,15 +27,14 @@
           <h3>AMERICAN EXPRESS</h3>
         </div>
         <div class="numberTarget">
-           <p id="numberTargetSee"><!--#### #### #### ####--></p>
+           <p id="numberTargetSee"></p>
         </div>
         <div class="nameUser">
           <p id="nameUserSee"></p>
         </div>
       </div>
       <form>
-        <input type="text" id="numberTarget" class="btn btnWhite" placeholder="Numero de cuenta" required autocomplete="off" pattern="[0-9]*">
-        <!-- <label for="floatingInputInvalid">Numero invalido!</label> -->
+        <input type="text" id="numberTarget" class="btn btnWhite" placeholder="Numero de cuenta" autocomplete="off" pattern="[0-9]+" maxlength="16" aria-required="false">
         <div>
           <input type="submit" value="Validar" id="validate" class="btn btnBlue">
         </div>
