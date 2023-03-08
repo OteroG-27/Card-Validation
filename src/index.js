@@ -1,7 +1,6 @@
 import validator from './validator.js';
 import {startTime, checkTime} from './date.js';
 window.addEventListener('DOMContentLoaded', startTime, checkTime);
-// validator.isValid(4083952015263);
 let validate = document.getElementById('validate');
 validate.addEventListener('click', (event) => {
   event.preventDefault();
@@ -18,7 +17,7 @@ validate.addEventListener('click', (event) => {
     document.getElementById('numberTarget').classList.add('numberValid');
     document.getElementById('numberTarget').classList.remove('numberInvalid');
   }else{
-    alert('Introduzca un numero de tarjeta valido');
+    alert('Numero Invalido');
     document.getElementById('numberTargetSee').innerHTML = numeroConNumeral;
     document.getElementById('numberTarget').classList.add('numberInvalid');
     document.getElementById('numberTarget').classList.remove('numberValid');
