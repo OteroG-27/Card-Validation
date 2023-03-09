@@ -8,7 +8,7 @@ validate.addEventListener('click', (event) => {
   let isValid = validator.isValid(numberTargetCredit);
   let numeroConNumeral = validator.maskify(numberTargetCredit);
   if(isValid === true && numberTargetCredit === '') {
-    alert("Para validar ingrese mas de 16 caracteres");
+    alert("Para validar ingrese mas 1 caracteres");
     document.getElementById('numberTarget').classList.add('numberInvalid');
     document.getElementById('numberTarget').classList.remove('numberValid');
   }else if(isValid) {
