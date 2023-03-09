@@ -1,6 +1,7 @@
-import validator from './validator.js';
+import validator from '../validator.js';
 import {startTime, checkTime} from './date.js';
 window.addEventListener('DOMContentLoaded', startTime, checkTime);
+validator.isValid('4083952015263');
 let validate = document.getElementById('validate');
 validate.addEventListener('click', (event) => {
   event.preventDefault();
