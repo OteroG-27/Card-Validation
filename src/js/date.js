@@ -30,9 +30,10 @@ let startTime = () => {
   let date = curWeekDay + ", " + curDay + " " + curMonth + " " + curYear;
   document.getElementById("date").innerHTML = date;
 
-  let time = setTimeout(() => {
+  setTimeout(() => {
     startTime();
   }, 500);
+
 }
 const checkTime = (i) => {
   if (i < 10) {
